@@ -22,8 +22,6 @@ class _SecondTaskState extends State<SecondTask> {
     'https://via.placeholder.com/600/f66b97',
   ];
 
-  Timer? _timer;
-
   @override
   void initState() {
     super.initState();
@@ -31,7 +29,7 @@ class _SecondTaskState extends State<SecondTask> {
   }
 
   void _startAutoSlide() {
-    _timer = Timer.periodic(
+    Timer.periodic(
       const Duration(seconds: 3),
       (timer) {
         if (_currentPage < _images.length - 1) {
