@@ -28,6 +28,12 @@ class _SecondTaskState extends State<SecondTask> {
     _startAutoSlide();
   }
 
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
   void _startAutoSlide() {
     Timer.periodic(
       const Duration(seconds: 3),
